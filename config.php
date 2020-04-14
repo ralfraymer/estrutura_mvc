@@ -4,14 +4,14 @@ require 'environment.php';
 
 $config = array();
 if(ENVIRONMENT == 'development'){
-    define("BASE_URL","http://localhost/estrutura_mvc/");
-    $config['dbname'] = 'estrutura_mvc';
+    define("BASE_URL","http://localhost/structure_mvc/");
+    $config['dbname'] = 'structure_mvc';
     $config['host'] = 'localhost';
     $config['dbuser'] = 'root';
     $config['dbpass'] = '';
 }else{
     define("BASE_URL","https://www.mandaweb.com.br/");
-    $config['dbname'] = 'estrutura_mvc';
+    $config['dbname'] = 'structure_mvc';
     $config['host'] = 'localhost';
     $config['dbuser'] = 'root';
     $config['dbpass'] = '';
