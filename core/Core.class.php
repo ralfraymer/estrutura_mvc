@@ -8,18 +8,26 @@ class Core{
              $url .= $_GET['url'];
         }
 
-        if(empty($url) && $url != '/'){
+        if(!empty($url) && $url != '/'){
             $url = explode('/', $url);
             array_shift($url);
 
             $currentController = $url[0].'Controller';  
+            array_shift($url);
+            
+            if(isset($url[0]) && !empty($url[0])){
+                $currentAction = $url[0];
+            } else{
+                $currentAction = 'index';
+            }
         } else{
             $currentController = 'homeController';
             $currentAction = 'index';
         }
-        echo "URL: ".$url;
-        echo "Controler: ".$currentController;
-        echo "Action: ".$currentAction;
+
+
+        echo "</br>Controler: ".$currentController;
+        echo "</br>Action: ".$currentAction;
 
     }
 }
