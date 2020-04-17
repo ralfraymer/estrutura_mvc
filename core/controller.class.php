@@ -1,9 +1,9 @@
 <?php
 
-class controller{
+class Controller{
     public function loadView($viewName, $viewData = array()){
         extract($viewData);
-        require('views/'.$viewName.'.view.php');
+        require('views/'.$viewName.'.View.php');
     }   
 
     public function loadTemplate($viewName, $viewData = array()){

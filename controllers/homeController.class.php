@@ -1,11 +1,15 @@
 <?php
 
-class homeController extends controller{
+class homeController extends Controller{
     public function index(){
+        $ads = new Ads();
+        $user = new Usuario();
+
         $data = array(
-            'title' => 'Initial page',
-            'amount' => 5,
-            'name' => 'Ralf'
+            'title' => 'My Title',
+            'amount' => $ads->getQtd(),
+            'name' => $user->getName(),
+            'year' => $user->getYear()
         );
         $this->loadTemplate('home', $data);
     }

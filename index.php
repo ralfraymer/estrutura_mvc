@@ -4,14 +4,14 @@ require 'config.php';
 
 spl_autoload_register(function($class){
 
-     if(file_exists('controllers/'.$class.'.class.php')){
-         require 'controllers/'.$class.'.class.php';
+     if(file_exists('controllers/'.$class.'.Class.php')){
+         require 'controllers/'.$class.'.Class.php';
      }
-     else if(file_exists('models/'.$class.'.class.php')){
-        require 'models/'.$class.'.class.php';
-     } 
-     else if(file_exists('core/'.$class.'.class.php')){
-        require 'core/'.$class.'.class.php';
+     else if(file_exists('models/'.$class.'.Model.php')){
+        require 'models/'.$class.'.Model.php';
+     }
+     else if(file_exists('core/'.$class.'.Class.php')){
+        require 'core/'.$class.'.Class.php';
     };
 
 
