@@ -18,9 +18,9 @@ if(ENVIRONMENT == 'development'){
     
 }
 
-global $db;
+global $dbConfig;
 try {
-    $db = new PDO("mysql:host=".$config['host'].";dbname=".$config['dbname'], $config['dbuser'], $config['dbpass']); 
+    $dbConfig = new PDO("mysql:host=".$config['host'].";dbname=".$config['dbname'], $config['dbuser'], $config['dbpass']); 
 
 } catch(PDOException $e){
     echo "Error: ".$e->getMessage();
