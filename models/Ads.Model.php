@@ -8,7 +8,6 @@ class Ads extends Model{
         if($sql->rowCount() > 0 ){           
             $sql = $sql->fetch(); 
             return $sql['c'];
-
         } else{
             return 0;
         }

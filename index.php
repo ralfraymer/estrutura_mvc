@@ -3,7 +3,6 @@ session_start();
 require 'config.php'; 
 
 spl_autoload_register(function($class){
-
      if(file_exists('controllers/'.$class.'.Class.php')){
          require 'controllers/'.$class.'.Class.php';
      }
@@ -13,11 +12,8 @@ spl_autoload_register(function($class){
      else if(file_exists('core/'.$class.'.Class.php')){
         require 'core/'.$class.'.Class.php';
     };
-
-
 });
 
 $core = new Core(); 
-
 $core->run();
 ?>

@@ -2,20 +2,11 @@
 <html lang="pt-br">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My page</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>assets/css/style.css">
+    <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/script.js"></script>
+    <title>Name page</title>
 </head>
 <body>
-        <nav>
-            <br>
-                <a href="<?php echo BASE_URL; ?>">Home</a>||<a href="<?php echo BASE_URL;?>gallery">Gallery</a>
-            <br>
-        </nav>
-        <hr>
-
-        <?php 
-            $this->loadViewInTemplate($viewName, $viewData);
-        ?>
-
-
+        <?php $this->loadViewInTemplate($viewName, $viewData);?>
 </body>
 </html>
